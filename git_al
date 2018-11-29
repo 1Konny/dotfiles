@@ -1,5 +1,0 @@
-#! /bin/bash
-
-function gcm(){
-    git commit -m '$1'
-}
