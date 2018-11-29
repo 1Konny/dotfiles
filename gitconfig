@@ -5,6 +5,7 @@
     co = checkout
     cob = checkout -b
     undo = reset --soft HEAD^
+    cm = commit -m
 
 [push]
     default = simple

@@ -36,6 +36,9 @@ ln -sf $DF_DIR/tmux.conf ~/.tmux.conf
 buo ~/.aliases
 ln -sf $DF_DIR/aliases ~/.aliases
 
+buo ~/.gitconfig
+ln -sf $DF_DIR/gitconfig ~/.gitconfig
+
 
 ##==== oh-my-zsh
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # one-liner
