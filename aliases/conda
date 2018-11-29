@@ -1,0 +1,62 @@
+#! /bin/bash
+
+function checkconda(){
+    if type "$conda" > /dev/null; then
+        retval="false"
+    else
+        retval="true"
+    fi
+
+    echo "$retval"
+}
+
+
+function mkcenv(){
+    # mkcenv : make conda environemnt
+    # usage : mkcenv [env_name] [python_version]
+    envname=$1
+    pyver=$2
+    if [ -z $envname -o -z $pyver ]; then
+        echo 'You should specify name of the conda environment with python version.'
+        echo 'Usage: mkcenv [env_name] [python_version]'
+        echo 'E.g. mkcenv my_env 3.6'
+    else
+        if [ $(checkconda) = "false" ]; then
+            echo "Can't find conda. check if conda is installed or its path is set properly."
+        else
+            conda create --name $envname python=$pyver --yes
+
+            source deactivate
+            source activate $envname
+            conda install --yes jupyter numpy matplotlib scipy 
+
+            # upgrade pip/pip3
+            pip install --upgrade pip --user
+            pip3 install --upgrade pip --user
+
+            # install python packages
+            pip install ipdb pdbpp --user
+            pip install visdom tqdm --user
+            pip install gpustat --user
+        fi
+
+    fi
+}
+
+
+function rmcenv(){
+    # rmcenv : remove conda environemnt
+    # usage : rmcenv [env_name]
+    envname=$1
+    if [ -z $envname ]; then
+        echo 'You should specify name of the conda environment.'
+        echo 'Usage: rmcenv [env_name]'
+        echo 'E.g. rmcenv my_env'
+    else
+        if [ $(checkconda) = "false" ]; then
+            echo "Can't find conda. check if conda is installed or its path is set properly."
+        else
+            conda env remove -n $envname -q
+        fi
+    fi
+}
