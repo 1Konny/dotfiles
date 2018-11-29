@@ -1,0 +1,13 @@
+[include]
+    path = ~/.gitconfig.secret
+
+[alias]
+    co = checkout
+    cob = checkout -b
+    undo = reset --soft HEAD^
+
+[push]
+    default = simple
+
+[status]
+    showUntrackedFiles = all
