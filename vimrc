@@ -91,5 +91,5 @@ let g:jedi#smart_auto_mappings=0
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#show_buffers=1
 let g:airline#extensions#tabline#formatter='unique_tail' " 
-let g:airline_theme='hybrid'
+let g:airline_theme='bubblegum'
 set laststatus=2                " turn on bottom bar
