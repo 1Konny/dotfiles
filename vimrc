@@ -58,15 +58,34 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o "
 let mapleader=","           " comma is the <Leader> key.
 let maplocalleader=","      " comma : <LocalLeader>
 
-" nerdtree
-"" browse file tree
-map <Leader>N :NERDTreeToggle<CR>
-
-"set completeopt-=preview
-let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
+nnoremap [b  :bprevious<CR>
+nnoremap ]b  :bnext<CR>
 
 " ipdb
 :nnoremap <Leader>b Oimport ipdb; ipdb.set_trace()<Esc>
 ab abip import ipdb; ipdb.set_trace()
+
+
+" =============== plugins ============= "
+" nerdtree
+"" browse file tree
+map <Leader>N :NERDTreeToggle<CR>
+
+" youcompleteme
+""let g:ycm_add_preview_to_completeopt = 1
+""let g:ycm_autoclose_preview_window_after_completion = 1
+""let g:ycm_autoclose_preview_window_after_insertion = 1
+
+" jedi-vim
+" https://github.com/davidhalter/jedi-vim/blob/master/doc/jedi-vim.txt
+let g:jedi#goto_command = "<leader>d"
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#completions_enabled = 0
+let g:jedi#show_call_signatures = 1
+let g:jedi#show_call_signatures_delay = 50
+let g:jedi#use_tabs_not_buffers = 0
+let g:jedi#smart_auto_mappings = 0
+
+" airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 1
