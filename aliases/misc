@@ -3,11 +3,11 @@
 function visp(){
     # visp : initilize visdom server
     # usage : visp [port_number(optional)]
-    portn=$1
+    portn="$1"
     if [ -z $portn ]; then
-        python -m visdom.server -p $portn
-    else
         python -m visdom.server -p 8097
+    else
+        python -m visdom.server -p $portn
     fi
 }
 
