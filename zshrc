@@ -6,16 +6,18 @@ export LANG=en_US.UTF-8
 
 
 ##==== Set terminal color bit?
-if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-	export TERM='xterm-256color'
-else
-	export TERM='xterm-color'
-fi
+#if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+#	export TERM='xterm-256color'
+#else
+#	export TERM='xterm-color'
+#fi
+export TERM='xterm-256color'
 
 
 ##==== OH-MY-ZSH
 # themes: https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="mrtazz"          # set zsh theme
+#ZSH_THEME="mrtazz"          # set zsh theme
+ZSH_THEME="mrtazz_custom"          # set zsh theme
 DISABLE_AUTO_UPDATE="true"  # no automatically update oh-my-zsh
 HIST_STAMPS="mm/dd/yyyy"    # history with date stamps
 

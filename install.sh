@@ -43,6 +43,7 @@ ln -sf $DF_DIR/gitconfig ~/.gitconfig
 ##==== oh-my-zsh
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # one-liner
 bash $DF_DIR/install-omz.sh
+ln -sf $DF_DIR/themes/mrtazz_custom.zsh-theme ~/.oh-my-zsh/themes/
 
 
 ##==== zsh plugins

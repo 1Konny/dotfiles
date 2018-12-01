@@ -34,6 +34,7 @@ set hlsearch				" highlight search keyword
 
 " color settings
 set t_Co=256
+set t_ut=
 set background=dark
 colorscheme xoria256
 
