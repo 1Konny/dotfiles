@@ -59,15 +59,16 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$ZSH/cu
 ###==== colorschemes
 mkdir ~/.vim
 git clone https://github.com/flazz/vim-colorschemes.git ~/.vim
-###==== pathogen
+###==== pathogen: vim plugins manager
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-###==== nerdtree
+###==== nerdtree: file/directory browser
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
-###==== jedi-vim
+###==== jedi-vim: jumps, auto-suggestions/completions
 git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim
-###==== airline
+###==== airline: status/tabline customization
 git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
-####==== youcompleteme
+git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
+####==== youcompleteme: auto-suggestions/completions
 #cd ~/.vim/bundle
 #git clone https://github.com/Valloric/YouCompleteMe.git; cd YouCompleteMe
 #git submodule update --init --recursive

@@ -78,14 +78,18 @@ map <Leader>N :NERDTreeToggle<CR>
 
 " jedi-vim
 " https://github.com/davidhalter/jedi-vim/blob/master/doc/jedi-vim.txt
-let g:jedi#goto_command = "<leader>d"
-let g:jedi#goto_assignments_command = "<leader>g"
-let g:jedi#completions_enabled = 0
-let g:jedi#show_call_signatures = 1
-let g:jedi#show_call_signatures_delay = 50
-let g:jedi#use_tabs_not_buffers = 0
-let g:jedi#smart_auto_mappings = 0
+let g:jedi#goto_command="<leader>d"
+let g:jedi#goto_assignments_command="<leader>g"
+let g:jedi#completions_enabled=0
+let g:jedi#show_call_signatures=1 " argument hints 
+let g:jedi#show_call_signatures_delay=50
+let g:jedi#use_tabs_not_buffers=0
+let g:jedi#smart_auto_mappings=0
 
 " airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 1
+" https://github.com/vim-airline/vim-airline#smarter-tab-line
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#show_buffers=1
+let g:airline#extensions#tabline#formatter='unique_tail' " 
+let g:airline_theme='hybrid'
+set laststatus=2                " turn on bottom bar
