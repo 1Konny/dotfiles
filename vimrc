@@ -92,4 +92,5 @@ let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#show_buffers=1
 let g:airline#extensions#tabline#formatter='unique_tail' " 
 let g:airline_theme='bubblegum'
+let g:airline_section_b = '%{strftime("%a %H:%M:%S %Y-%m-%d")}'
 set laststatus=2                " turn on bottom bar
