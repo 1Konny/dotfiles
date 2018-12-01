@@ -47,6 +47,7 @@ set history=1000
 set undolevels=1000
 set noswapfile
 set nobackup
+set splitbelow              " split bottom window
 
 
 " =============== functional ============= "
@@ -56,6 +57,11 @@ let maplocalleader=","      " comma : <LocalLeader>
 " nerdtree
 " " browse file tree
 map <Leader>N :NERDTreeToggle<CR>
+
+"set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " ipdb
 :nnoremap <Leader>b Oimport ipdb; ipdb.set_trace()<Esc>
