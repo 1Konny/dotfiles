@@ -1,5 +1,6 @@
 #! /bin/bash
 
+# visdom
 function visp(){
     # visp : initilize visdom server
     # usage : visp [port_number(optional)]

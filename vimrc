@@ -12,8 +12,8 @@ endif
 syntax on					" syntax highligting
 set nocompatible
 
-set ruler					" show row/col info
-set number					" show line numbers
+set ruler		            " show row/col info
+set number				    " show line numbers
 
 " indentation
 set backspace=eol,start,indent
@@ -29,7 +29,7 @@ set expandtab
 " search
 set ignorecase              " case-insensitive by default
 set smartcase               " case-sensitive if keyword contains both uppercase and lowercase
-set incsearch				" incremental search
+set incsearch	            " incremental search
 set hlsearch				" highlight search keyword
 
 " color settings
@@ -47,7 +47,10 @@ set history=1000
 set undolevels=1000
 set noswapfile
 set nobackup
-set splitbelow              " split bottom window
+set nowrap                  " no line wrapping
+set textwidth=0             " no line wrapping
+set splitbelow              " split bottom window if needed
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o " no auto comment when inserting newline 
 
 
 " =============== functional ============= "
@@ -55,7 +58,7 @@ let mapleader=","           " comma is the <Leader> key.
 let maplocalleader=","      " comma : <LocalLeader>
 
 " nerdtree
-" " browse file tree
+"" browse file tree
 map <Leader>N :NERDTreeToggle<CR>
 
 "set completeopt-=preview
