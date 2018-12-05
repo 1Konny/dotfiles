@@ -1,29 +1,7 @@
 #! /bin/bash
 
-function gst(){
-    git status
-}
-
-function gd(){
-    file="$1"
-    if [ ! -z $file ]; then
-        git diff $file
-    else
-        git diff
-    fi
-}
-
-
-function gcm(){
-    msg="$1"
-    if [ ! -z $msg ]; then
-        git commit -m $msg
-    else
-        echo "Please specify commit messages"
-    fi
-}
-
-function gcmd(){
-    echo 'Do git commit -m "."'
-    git commit -m '.'
-}
+alias ga='git add'
+alias gst='git status'
+alias gd='git diff'
+alias gcm='git commit -m'
+alias gcmd='git commit -m "."'
