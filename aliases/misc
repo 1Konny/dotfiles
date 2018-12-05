@@ -1,28 +1,21 @@
 #! /bin/bash
 
 # visdom
-function visp(){
-    # visp : initialize visdom server
-    # usage : visp [port(optional)]
-    portn="$1"
-    if [ -z $portn ]; then
-        python -m visdom.server -p 8097
-    else
-        python -m visdom.server -p $portn
-    fi
-}
+alias vis='python -m visdom.server'
 
 # jupyter notebook
-function jnp(){
-    # jnp : initialize jupyter notebook server
-    # usage : jnp [port(optional)]
-    portn="$1"
-    if [ -z $portn ]; then
-        jupyter notebook --port 8888
-    else
-        jupyter notebook --port $portn
-    fi
-}
+alias jn='jupyter notebook'
+alias jna='jupyter notebook --ip 0.0.0.0'
 
+# gpu
 alias gpu="watch --color -n.5 gpustat --color"
 alias gpusmi="watch -n.5 nvidia-smi"
+function usegpu(){
+    if [ ! -z "$1" ]; then
+        echo $1
+        export CUDA_VISIBLE_DEVICES=$1
+    else
+        echo 'none'
+        export CUDA_VISIBLE_DEVICES=''
+    fi
+}
