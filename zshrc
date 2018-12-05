@@ -1,6 +1,7 @@
 ##==== Set paths
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/anaconda3/bin:$PATH # anaconda3
+export PATH=$HOME/.local/bin:$PATH
 export ZSH=$HOME/.oh-my-zsh # oh-my-zsh
 export LANG=en_US.UTF-8
 

@@ -24,4 +24,5 @@ function jnp(){
     fi
 }
 
-alias gpu="watch -n.5 nvidia-smi"
+alias gpu="watch --color -n.5 gpustat --color"
+alias gpusmi="watch -n.5 nvidia-smi"
