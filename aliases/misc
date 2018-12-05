@@ -2,13 +2,25 @@
 
 # visdom
 function visp(){
-    # visp : initilize visdom server
-    # usage : visp [port_number(optional)]
+    # visp : initialize visdom server
+    # usage : visp [port(optional)]
     portn="$1"
     if [ -z $portn ]; then
         python -m visdom.server -p 8097
     else
         python -m visdom.server -p $portn
+    fi
+}
+
+# jupyter notebook
+function jnp(){
+    # jnp : initialize jupyter notebook server
+    # usage : jnp [port(optional)]
+    portn="$1"
+    if [ -z $portn ]; then
+        jupyter notebook --port 8888
+    else
+        jupyter notebook --port $portn
     fi
 }
 
