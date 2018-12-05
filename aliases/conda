@@ -60,3 +60,6 @@ function rmcenv(){
         fi
     fi
 }
+
+alias sa='source activate'
+alias sda='source deactivate'
