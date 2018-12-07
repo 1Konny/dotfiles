@@ -58,8 +58,12 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o "
 let mapleader=","           " comma is the <Leader> key.
 let maplocalleader=","      " comma : <LocalLeader>
 
-nnoremap [b  :bprevious<CR>
-nnoremap ]b  :bnext<CR>
+nnoremap [b  :bprevious<CR> " go to the previous buffer 
+nnoremap ]b  :bnext<CR>     " go to the next buffer
+
+" https://superuser.com/questions/310417/how-to-keep-in-visual-mode-after-identing-by-shift-in-vim
+:vnoremap < <gv             " keep in visual mode while indenting
+:vnoremap > >gv             " (")
 
 " ipdb
 :nnoremap <Leader>b Oimport ipdb; ipdb.set_trace()<Esc>
