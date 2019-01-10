@@ -38,6 +38,7 @@ function mkcenv(){
             pip install ipdb pdbpp --user
             pip install visdom tqdm --user
             pip install gpustat --user
+            pip install opencv-python --user
         fi
 
     fi
