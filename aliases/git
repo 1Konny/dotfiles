@@ -1,5 +1,7 @@
 #! /bin/bash
 
+alias guname="git config --file ~/.gitconfig.secret user.name"
+alias guemail="git config --file ~/.gitconfig.secret user.email"
 alias ga='git add'
 alias gst='git status'
 alias gd='git diff'
