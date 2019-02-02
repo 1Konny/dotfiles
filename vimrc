@@ -11,7 +11,7 @@ endif
 
 syntax on					" syntax highligting
 set nocompatible
-
+set cursorline              " highlight current cursorline
 set ruler		            " show row/col info
 set number				    " show line numbers
 
@@ -39,8 +39,8 @@ set background=dark
 colorscheme xoria256
 
 " copy-paste
-set pastetoggle=<F8>		" this will disable auto indent when pasting
-autocmd InsertLeave * silent! set nopaste " unset paste when leaving insert mode
+set pastetoggle=<F8>		                " this will disable auto indent when pasting
+autocmd InsertLeave * silent! set nopaste   " unset paste when leaving insert mode
 
 " misc
 set visualbell
@@ -51,12 +51,16 @@ set nobackup
 set nowrap                  " no line wrapping
 set textwidth=0             " no line wrapping
 set splitbelow              " split bottom window if needed
+set lazyredraw              " don't update screen during macro and script execution
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o " no auto comment when inserting newline 
 
 
 " =============== functional ============= "
 let mapleader=","           " comma is the <Leader> key.
 let maplocalleader=","      " comma : <LocalLeader>
+
+nnoremap <leader>r :so $MYVIMRC<CR> " reload vimrc in current vim
+nnoremap <F2> :noh<CR>              " turn off search highlight until the next search
 
 nnoremap [b  :bprevious<CR> " go to the previous buffer 
 nnoremap ]b  :bnext<CR>     " go to the next buffer
@@ -66,8 +70,7 @@ nnoremap ]b  :bnext<CR>     " go to the next buffer
 :vnoremap > >gv             " (")
 
 " ipdb
-:nnoremap <Leader>b Oimport ipdb; ipdb.set_trace()<Esc>
-ab abip import ipdb; ipdb.set_trace()
+:nnoremap <Leader>b Oimport ipdb; ipdb.set_trace(context=15)<Esc>
 
 
 " =============== plugins ============= "
