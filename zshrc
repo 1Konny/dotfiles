@@ -8,6 +8,7 @@ export MYVIMRC=$HOME/.vimrc
 export SHELL=$(which zsh)
 export ZSH=$HOME/.oh-my-zsh # oh-my-zsh
 export LANG=en_US.UTF-8
+export MYDOTFILES=$HOME/.dotfiles
 
 
 #==================================================#
@@ -17,6 +18,8 @@ export TERM='xterm-256color' # terminal color
 
 #==================================================#
 ### zsh settings
+
+export LS_COLORS=$(cat $MYDOTFILES/LS_COLORS)
 
 # OH-MY-ZSH
 # themes: https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
