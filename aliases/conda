@@ -1,10 +1,10 @@
 #! /bin/bash
 
 function checkconda(){
-    if type "$conda" > /dev/null; then
-        retval="false"
-    else
+    if type "conda" > /dev/null 2>&1; then
         retval="true"
+    else
+        retval="false"
     fi
 
     echo "$retval"
