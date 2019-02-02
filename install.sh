@@ -13,7 +13,7 @@ done
 
 
 #==================================================#
-DF_DIR=$PWD
+DOT_DIR=$PWD
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$ZSH/custom
 
@@ -23,16 +23,16 @@ source "$PWD/aliases/misc"
 if [ "$forced" != "true" ]; then
     buo .Xmodmap .vim .vimrc .tmux.conf .aliases .gitconfig .gitconfig.secret .condarc .zshrc .oh-my-zsh
 fi
-ln -sf $DF_DIR/Xmodmap $HOME/.Xmodmap 
-ln -sf $DF_DIR/vimrc $HOME/.vimrc
-ln -sf $DF_DIR/tmux.conf $HOME/.tmux.conf
-ln -sf $DF_DIR/aliases $HOME/.aliases
-ln -sf $DF_DIR/gitconfig $HOME/.gitconfig
-ln -sf $DF_DIR/condarc $HOME/.condarc
-ln -sf $DF_DIR/zshrc $HOME/.zshrc
+ln -sf $DOT_DIR/Xmodmap $HOME/.Xmodmap 
+ln -sf $DOT_DIR/vimrc $HOME/.vimrc
+ln -sf $DOT_DIR/tmux.conf $HOME/.tmux.conf
+ln -sf $DOT_DIR/aliases $HOME/.aliases
+ln -sf $DOT_DIR/gitconfig $HOME/.gitconfig
+ln -sf $DOT_DIR/condarc $HOME/.condarc
+ln -sf $DOT_DIR/zshrc $HOME/.zshrc
 echo; echo '** download oh-my-zsh.'
-bash $DF_DIR/install-omz.sh; 
-ln -sf $DF_DIR/themes/mrtazz_custom.zsh-theme $HOME/.oh-my-zsh/themes/
+bash $DOT_DIR/install-omz.sh; 
+ln -sf $DOT_DIR/themes/mrtazz_custom.zsh-theme $HOME/.oh-my-zsh/themes/
 
 
 #==================================================#
