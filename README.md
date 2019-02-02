@@ -2,8 +2,12 @@
 
 ```
 git clone https://github.com/1Konny/dotfiles.git ~/.dotfiles; 
-cd ~/.dotfiles; bash install.sh
+cd ~/.dotfiles; bash install.sh -c
 ```
-
-TODO
-[ ]: insert virtualenv(or conda) name into PS1
+terminal info: <br>
+ - type: xterm <br>
+ - colorscheme: New Black <br>
+ - font: DejaVu Sans Mono (size: 10)
+ - asian font: DejaVu Sans Mono (size: 10)
+ - font quality: Natural ClearType
+ - bold: Use bold color and font
