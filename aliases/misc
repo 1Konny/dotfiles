@@ -1,5 +1,21 @@
 #! /bin/bash
 
+# backup existing dotfiles. 
+# (buo : back-up-original)
+function buo(){
+    backup_dir="$HOME/dotfiles_backup"
+    for name in "$@"; do
+        path="$HOME/$name"
+        if [ -f $path ] || [ -h $path ] || [ -d $path ];
+        then
+            mkdir -p $backup_dir
+            new_path="$backup_dir/$name"
+            printf "Found '$path'. Backing up to '$new_path\n"
+            mv $path $new_path
+        fi
+    done
+}
+
 # visdom
 alias vis='python -m visdom.server'
 
@@ -20,9 +36,9 @@ function usegpu(){
     fi
 }
 
-function gdown () {
+function gdown(){
     # usage: gdown [id] [name]
     CONFIRM=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate "https://docs.google.com/uc?export=download&id=$1" -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')
     wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$CONFIRM&id=$1" -O $2
     rm -rf /tmp/cookies.txt
- }
+}
