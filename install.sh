@@ -70,8 +70,9 @@ then
     if [ $(checkconda) = "true" ]; then
         echo; echo "** anaconda already exists."
     else
-        echo; echo "** anaconda does not exist. download and install anaconda3."
+        echo; echo "** anaconda does not exist. download anaconda3."
         wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh -O anaconda.sh
+        echo; echo "** install anaconda3."
         bash anaconda.sh -b -p $HOME/anaconda3
         rm anaconda.sh
         #conda update conda --yes
