@@ -35,7 +35,7 @@ function mkcenv(){
             pip3 install --upgrade pip --user
 
             # install python packages
-            pip install ipdb pdbpp visdom tqdm gpustat opencv-python --user
+            pip install requests ipdb pdbpp visdom tqdm gpustat opencv-python --user
         fi
     fi
 }
