@@ -59,8 +59,10 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o "
 let mapleader=","           " comma is the <Leader> key.
 let maplocalleader=","      " comma : <LocalLeader>
 
-nnoremap <leader>r :so $MYVIMRC<CR> " reload vimrc in current vim
+nnoremap <leader>R :so $MYVIMRC<CR> " reload vimrc in current vim
 nnoremap <F2> :noh<CR>              " turn off search highlight until the next search
+nnoremap <F9> :set invnumber<CR>    " toggle line number (for the sake of copying text without line numbers)
+nnoremap <leader>s :w<CR>           " write/save
 
 nnoremap [b  :bprevious<CR> " go to the previous buffer 
 nnoremap ]b  :bnext<CR>     " go to the next buffer
