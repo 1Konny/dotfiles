@@ -78,7 +78,8 @@ nnoremap ]b  :bnext<CR>     " go to the next buffer
 " =============== plugins ============= "
 " nerdtree
 "" browse file tree
-map <Leader>N :NERDTreeToggle<CR>
+"map <Leader>N :NERDTreeToggle<CR>
+map " :NERDTreeToggle<CR>
 
 " youcompleteme
 ""let g:ycm_add_preview_to_completeopt = 1
