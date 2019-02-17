@@ -73,6 +73,7 @@ nnoremap ]b  :bnext<CR>     " go to the next buffer
 
 " ipdb
 :nnoremap <Leader>b Oimport ipdb; ipdb.set_trace(context=15)<Esc>
+:nnoremap <Leader>v oimport ipdb; ipdb.set_trace(context=15)<Esc>
 
 
 " =============== plugins ============= "
