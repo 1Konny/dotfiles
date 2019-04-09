@@ -66,6 +66,7 @@ nnoremap <leader>s :w<CR>           " write/save
 
 nnoremap [b  :bprevious<CR> " go to the previous buffer 
 nnoremap ]b  :bnext<CR>     " go to the next buffer
+set hidden                  " enable switching across buffers without saving.
 
 " https://superuser.com/questions/310417/how-to-keep-in-visual-mode-after-identing-by-shift-in-vim
 :vnoremap < <gv             " keep in visual mode while indenting
