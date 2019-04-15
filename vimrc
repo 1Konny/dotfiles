@@ -82,6 +82,7 @@ set hidden                  " enable switching across buffers without saving.
 "" browse file tree
 "map <Leader>N :NERDTreeToggle<CR>
 map " :NERDTreeToggle<CR>
+set encoding=utf-8 " fix the issue of being unable to open files outside current directory
 
 " youcompleteme
 ""let g:ycm_add_preview_to_completeopt = 1
