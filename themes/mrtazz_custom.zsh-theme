@@ -33,7 +33,7 @@ $(conda_prompt_info)\
 %{$reset_color%}\
  $(git_prompt_info)\
  $(cuda_prompt_info)
-%{$fg_bold[blue]%}→ '
+%{$fg_bold[blue]%}$ '
 
 ZSH_THEME_CONDA_PREFIX="%{$FG[226]%}("
 ZSH_THEME_CONDA_SUFFIX="%{$FG[226]%})%{$reset_color%}"
