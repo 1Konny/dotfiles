@@ -107,3 +107,8 @@ let g:airline#extensions#tabline#formatter='unique_tail' "
 let g:airline_theme='bubblegum'
 let g:airline_section_b = '%{strftime("%a %H:%M:%S %Y-%m-%d")}'
 set laststatus=2                " turn on bottom bar
+
+" vim-flake8
+autocmd FileType python map <buffer> <F5> :call flake8#Flake8()<CR>
+nnoremap <F6> :cclose<CR>
+let g:flake8_quickfix_height=25
