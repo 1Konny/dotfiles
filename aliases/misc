@@ -47,3 +47,8 @@ alias cudnnv='cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2'
 alias jnlist='jupyter notebook list'
 alias tblist='ps -ef | grep "tensorboard"'
 alias pylist='ps -ef | grep "python"'
+
+# Temp
+alias pth='sa pth && pip install pandas pyyaml tqdm ipdb pdbpp tensorboard==1.14'
+alias tb='sa tb && pip install tensorboard==1.12 && tensorboard --port 6006 --logdir=./'
+alias jnaa='sa pth && jupyter-notebook --port 8888 --ip 0.0.0.0'
