@@ -64,9 +64,12 @@ git clone https://github.com/vim-airline/vim-airline-themes $HOME/.vim/bundle/vi
 # vim-flake8 : pep8 checker
 git clone https://github.com/nvie/vim-flake8.git $HOME/.vim/bundle/vim-flake8
 # vim-commentary
-mkdir -p ~/.vim/pack/tpope/start
-git clone https://tpope.io/vim/commentary.git ~/.vim/pack/tpope/start/commentary
+mkdir -p $HOME/.vim/pack/tpope/start
+git clone https://tpope.io/vim/commentary.git $HOME/.vim/pack/tpope/start/commentary
 vim -u NONE -c "helptags commentary/doc" -c q
+# ctrlp.vim
+git clone https://github.com/ctrlpvim/ctrlp.vim.git $HOME/.vim/bundle/ctrlp.vim
+vim -u NONE -c "helptags $HOME/.vim/bundle/ctrlp.vim/doc" -c q
 
 #==================================================#
 # anaconda3

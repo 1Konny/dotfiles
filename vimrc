@@ -116,3 +116,6 @@ let g:flake8_quickfix_height=25
 " remove trailing whitespaces from all lines
 " https://vi.stackexchange.com/questions/454/whats-the-simplest-way-to-strip-trailing-whitespace-from-all-lines-in-a-file
 nnoremap <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+" ctrlp.vim
+set runtimepath^=~/.vim/bundle/ctrlp.vim
