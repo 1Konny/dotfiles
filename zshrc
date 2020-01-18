@@ -76,5 +76,13 @@ done
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# fzf preview
+function fzfv()
+{
+    fzf --preview '[[ $(file --mime {}) =~ binary ]] &&
+                 echo {} is a binary file ||
+                 (cat {}) 2> /dev/null | head -500'
+}
+
 # remove duplicates in PATH
 export PATH="$(echo -n $PATH | awk -v RS=: -v ORS=: '!arr[$0]++')"
