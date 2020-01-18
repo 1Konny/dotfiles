@@ -33,6 +33,7 @@ function usegpu(){
         export CUDA_VISIBLE_DEVICES=''
     fi
 }
+alias ug='usegpu'
 
 function gdown(){
     # usage: gdown [id] [name]
