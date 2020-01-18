@@ -11,3 +11,4 @@ rm -rf $HOME/.vimrc
 rm -rf $HOME/.vim
 rm -rf $HOME/.zshrc
 rm -rf $HOME/.gitconfig.secret
+rm -rf $HOME/.fzf*

@@ -73,5 +73,8 @@ do
     source $alias_file
 done
 
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # remove duplicates in PATH
 export PATH="$(echo -n $PATH | awk -v RS=: -v ORS=: '!arr[$0]++')"

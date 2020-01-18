@@ -21,7 +21,7 @@ ZSH_CUSTOM=$ZSH/custom
 #==================================================#
 source "$PWD/aliases/misc"
 if [ "$forced" != "true" ]; then
-    buo .Xmodmap .vim .vimrc .tmux.conf .aliases .gitconfig .gitconfig.secret .condarc .zshrc .oh-my-zsh
+    buo .Xmodmap .vim .vimrc .tmux.conf .aliases .gitconfig .gitconfig.secret .condarc .zshrc .oh-my-zsh .fzf
 fi
 ln -sf $DOT_DIR/Xmodmap $HOME/.Xmodmap 
 ln -sf $DOT_DIR/vimrc $HOME/.vimrc
@@ -40,34 +40,37 @@ ln -sf $DOT_DIR/themes/mrtazz_custom.zsh-theme $HOME/.oh-my-zsh/themes/
 
 # zsh
 echo; echo '** download zsh plugins.'
-# alias-tip 
+## alias-tip 
 git clone https://github.com/djui/alias-tips.git ${ZSH_CUSTOM:-$ZSH/custom}/plugins/alias-tips
-# zsh-syntax-highlighting 
+## zsh-syntax-highlighting 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$ZSH/custom}/plugins/zsh-syntax-highlighting
-# zsh-autosuggestions
+## zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$ZSH/custom}/plugins/zsh-autosuggestions
+## fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
+$HOME/.fzf/install --all
 
 # vim 
 echo; echo '** download vim plugins.'
-# colorschemes
+## colorschemes
 mkdir $HOME/.vim
 git clone https://github.com/flazz/vim-colorschemes.git $HOME/.vim
-# pathogen: vim plugins manager
+## pathogen: vim plugins manager
 mkdir -p $HOME/.vim/autoload $HOME/.vim/bundle && curl -LSso $HOME/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-# nerdtree: file/directory browser
+## nerdtree: file/directory browser
 git clone https://github.com/scrooloose/nerdtree.git $HOME/.vim/bundle/nerdtree
-# jedi-vim: jumps, auto-suggestions/completions
+## jedi-vim: jumps, auto-suggestions/completions
 git clone --recursive https://github.com/davidhalter/jedi-vim.git $HOME/.vim/bundle/jedi-vim
-# airline: status/tabline customization
+## airline: status/tabline customization
 git clone https://github.com/vim-airline/vim-airline $HOME/.vim/bundle/vim-airline
 git clone https://github.com/vim-airline/vim-airline-themes $HOME/.vim/bundle/vim-airline-themes
-# vim-flake8 : pep8 checker
+## vim-flake8 : pep8 checker
 git clone https://github.com/nvie/vim-flake8.git $HOME/.vim/bundle/vim-flake8
-# vim-commentary
+## vim-commentary
 mkdir -p $HOME/.vim/pack/tpope/start
 git clone https://tpope.io/vim/commentary.git $HOME/.vim/pack/tpope/start/commentary
 vim -u NONE -c "helptags commentary/doc" -c q
-# ctrlp.vim
+## ctrlp.vim
 git clone https://github.com/ctrlpvim/ctrlp.vim.git $HOME/.vim/bundle/ctrlp.vim
 vim -u NONE -c "helptags $HOME/.vim/bundle/ctrlp.vim/doc" -c q
 
