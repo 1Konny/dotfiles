@@ -60,7 +60,8 @@ let mapleader=","           " comma is the <Leader> key.
 let maplocalleader=","      " comma : <LocalLeader>
 
 nnoremap <leader>R :so $MYVIMRC<CR> " reload vimrc in current vim
-nnoremap <F2> :noh<CR>              " turn off search highlight until the next search
+" nnoremap <F2> :noh<CR>              " turn off search highlight until the next search
+nnoremap @ :noh<CR>              " turn off search highlight until the next search
 nnoremap <F9> :set invnumber<CR>    " toggle line number (for the sake of copying text without line numbers)
 nnoremap <leader>s :w<CR>           " write/save
 
