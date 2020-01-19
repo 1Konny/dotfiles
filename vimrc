@@ -93,11 +93,15 @@ set encoding=utf-8 " fix the issue of being unable to open files outside current
 " https://github.com/davidhalter/jedi-vim/blob/master/doc/jedi-vim.txt
 let g:jedi#goto_command="<leader>d"
 let g:jedi#goto_assignments_command="<leader>g"
-let g:jedi#completions_enabled=0
+let g:jedi#completions_enabled=1
 let g:jedi#show_call_signatures=1 " argument hints 
 let g:jedi#show_call_signatures_delay=50
-let g:jedi#use_tabs_not_buffers=0
+let g:jedi#use_tabs_not_buffers=1
 let g:jedi#smart_auto_mappings=0
+let g:jedi#popup_on_dot = 0
+let g:jedi#show_call_signatures = "1"
+let g:jedi#auto_close_doc = 1
+autocmd FileType python setlocal completeopt-=preview
 
 " airline
 " https://github.com/vim-airline/vim-airline#smarter-tab-line
