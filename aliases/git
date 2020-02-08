@@ -10,3 +10,14 @@ alias gcmd='git commit -m "."'
 alias gcl='git clone'
 alias gps='git push'
 alias gpl='git pull'
+
+function gclone(){
+    user=$1
+    repo=$2
+    if [ -z $user -o -z $repo ]; then
+        echo 'Alias for git clone https://www.github.com/user/repository.git'
+        echo 'Usage: gclone [user] [repository]'
+    else
+        git clone https://www.github.com/$user/$repo.git
+    fi
+}
