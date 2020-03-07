@@ -75,9 +75,9 @@ function howmany(){
         help
     else
         set -o noglob
+        dirname=$1
         pattern=$2
-        echo $pattern
-        cmd="set +f && find ${dirname} -name ${pattern} -printf '.' | wc -m"
+        cmd="find ${dirname} -name ${pattern} -printf '.' | wc -m"
         echo $cmd
         eval $cmd
         set -o glob
