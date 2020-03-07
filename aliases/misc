@@ -53,3 +53,33 @@ alias pylist='ps -ef | grep "python"'
 alias pth='sa pth && pip install pandas pyyaml tqdm ipdb pdbpp tensorboard==1.14'
 alias tb='sa tb && pip install tensorboard==1.12 && tensorboard --port 6006 --logdir=./'
 alias jnaa='sa pth && jupyter-notebook --port 8888 --ip 0.0.0.0'
+
+# custom rsync
+function myrsync(){
+    port=$1
+    remainder=$2
+    cmd="rsync -avzhe 'ssh -p ${port}' ${remainder}" 
+    echo $cmd
+    eval $cmd
+}
+
+function howmany(){
+    function help(){
+        echo 'Count the number of files with PATTERN in a specific location LOCATION'
+        echo 'Usage: howmany LOCATION "PATTERN"'
+        echo 'Example: howmany /path/to/your/images/ "*.jpg"'
+    }
+    if [ -z "$1" ]; then
+        help
+    elif [ -z "$2" ]; then
+        help
+    else
+        set -o noglob
+        pattern=$2
+        echo $pattern
+        cmd="set +f && find ${dirname} -name ${pattern} -printf '.' | wc -m"
+        echo $cmd
+        eval $cmd
+        set -o glob
+    fi
+}
