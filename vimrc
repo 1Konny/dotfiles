@@ -124,3 +124,12 @@ nnoremap <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 " ctrlp.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+" -- https://seulcode.tistory.com/275
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+" set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']       "Ignore in .gitignore
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'                                           "Ignore node_modules
+let g:ctrlp_custom_ignore = {
+  \ 'file': '\v\.(pyc|so|dll)$',
+  \ }
+" --
