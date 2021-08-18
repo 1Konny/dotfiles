@@ -36,7 +36,24 @@ set hlsearch				" highlight search keyword
 set t_Co=256
 set t_ut=
 set background=dark
-colorscheme xoria256
+
+" colorscheme xoria256
+" colorscheme afterglow 
+
+" set termguicolors     " enable true colors support
+" let ayucolor="light"  " for light version of theme
+" let ayucolor="mirage" " for mirage version of theme
+" let ayucolor="dark"   " for dark version of theme
+" colorscheme ayu
+
+syntax enable
+set t_Co=256
+if (has("termguicolors"))
+set termguicolors
+endif
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+colorscheme OceanicNext
 
 " copy-paste
 set pastetoggle=<F8>		                " this will disable auto indent when pasting
@@ -133,3 +150,5 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(pyc|so|dll)$',
   \ }
 " --
+
+

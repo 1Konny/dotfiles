@@ -73,6 +73,8 @@ vim -u NONE -c "helptags commentary/doc" -c q
 ## ctrlp.vim
 git clone https://github.com/ctrlpvim/ctrlp.vim.git $HOME/.vim/bundle/ctrlp.vim
 vim -u NONE -c "helptags $HOME/.vim/bundle/ctrlp.vim/doc" -c q
+## vim themes
+git clone https://github.com/mhartington/oceanic-next.git $HOME/.vim/bundle/oceanic-next
 
 #==================================================#
 # anaconda3
