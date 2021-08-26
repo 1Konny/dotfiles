@@ -10,6 +10,7 @@ alias gcmd='git commit -m "."'
 alias gcl='git clone'
 alias gps='git push'
 alias gpl='git pull'
+alias gra
 
 function gclone(){
     user=$1
@@ -19,5 +20,17 @@ function gclone(){
         echo 'Usage: gclone [user] [repository]'
     else
         git clone https://www.github.com/$user/$repo.git
+    fi
+}
+
+
+function gra(){
+    user=$1
+    repo=$2
+    if [ -z $user -o -z $repo ]; then
+        echo 'Alias for git remote add origin git@github.com:USERNAME/REPONAME.git' 
+        echo 'Usage: gra [USERNAME] [REPONAME]'
+    else
+        git remote add origin git@github.com:$1/$2.git
     fi
 }
