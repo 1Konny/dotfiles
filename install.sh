@@ -56,7 +56,7 @@ echo; echo '** download vim plugins.'
 mkdir $HOME/.vim
 git clone https://github.com/flazz/vim-colorschemes.git $HOME/.vim
 ## pathogen: vim plugins manager
-mkdir -p $HOME/.vim/autoload $HOME/.vim/bundle && curl -LSso $HOME/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+mkdir -p $HOME/.vim/autoload $HOME/.vim/bundle && curl -k -LSso $HOME/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ## nerdtree: file/directory browser
 git clone https://github.com/scrooloose/nerdtree.git $HOME/.vim/bundle/nerdtree
 ## jedi-vim: jumps, auto-suggestions/completions

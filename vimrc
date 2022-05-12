@@ -3,7 +3,6 @@
 execute pathogen#infect()
 filetype plugin indent on
 
-
 " =============== general ============= "
 if filereadable('/bin/zsh')
   set shell=/bin/zsh

@@ -58,5 +58,13 @@ function rmcenv(){
     fi
 }
 
-alias sa='source activate'
-alias sda='source deactivate'
+function sda(){
+    conda deactivate
+}
+
+function sa(){
+    conda activate $1 
+}
+
+alias condapip3=${CONDA_PREFIX}/bin/pip3
+alias condapip2=${CONDA_PREFIX}/bin/pip3
